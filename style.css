@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --font-family-Young-Serif: "Young Serif", serif;
+  --font-family-Outfit: "Outfit", sans-serif;
+  --f-weight-regular: 400;
+  --f-weight-semibold: 600;
+  --f-weight-bold: 700;
+
+  --f-size: 16px;
+
+  --Primary-Nutmeg: hsl(14, 45%, 36%);
+  --Primary-Dark-Raspberry: hsl(332, 51%, 32%);
+
+  --Neutral-White: hsl(0, 0%, 100%);
+  --Neutral-Rose-White: hsl(330, 100%, 98%);
+  --Neutral-Eggshell: hsl(30, 54%, 90%);
+  --Neutral-Light-Grey: hsl(30, 18%, 87%);
+  --Neutral-Wenge-Brown: hsl(30, 10%, 34%);
+  --Neutral-Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--font-family-Outfit);
+  font-size: var(--f-size);
+  background-color: var(--Neutral-Eggshell);
+}
+
+.container {
+  margin: 0 auto;
+  /* width: 50vw; */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe_card {
+  /* max-width: 600px; */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--Neutral-White);
+  border-radius: 15px;
+  /* max-width: 400px; */
+  overflow: hidden;
+  margin: 20px 20px;
+}
+
+.recipe_img {
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.recipe_img img {
+  width: 100%;
+}
+
+.recipe_detail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--font-family-Outfit);
+  padding: 40px;
+}
+
+.recipe_name {
+  font-family: var(--font-family-Young-Serif);
+  font-weight: var(--f-weight-bold);
+  color: var(--Neutral-Dark-Charcoal);
+  font-size: 32px;
+}
+
+.recipe_summery {
+  color: var(--Neutral-Wenge-Brown);
+}
+
+.prep_time {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--Neutral-Rose-White);
+}
+
+.prep_time .title {
+  color: var(--Primary-Dark-Raspberry);
+}
+
+.bold {
+  color: hsl(24, 5%, 18%, 0.9);
+  font-weight: var(--f-weight-bold);
+}
+
+ol > li,
+ul > li {
+  color: var(--Neutral-Wenge-Brown);
+  margin: 10px 0;
+  overflow: ;
+}
+
+h2 {
+  color: var(--Primary-Nutmeg);
+  font-family: var(--font-family-Young-Serif);
+  font-weight: 500;
+}
