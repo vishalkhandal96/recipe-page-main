@@ -76,7 +76,7 @@ body {
 }
 
 .recipe_card {
-  /* max-width: 600px; */
+  max-width: 600px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -84,9 +84,8 @@ body {
   flex-direction: column;
   background-color: var(--Neutral-White);
   border-radius: 15px;
-  /* max-width: 400px; */
   overflow: hidden;
-  margin: 20px 20px;
+  margin: 60px 20px;
 }
 
 .recipe_img {
@@ -107,7 +106,14 @@ body {
   flex-direction: column;
   gap: 20px;
   font-family: var(--font-family-Outfit);
-  padding: 40px;
+  padding: 20px;
+}
+.recipe_detail hr {
+  flex-direction: row;
+  width: 100%;
+  opacity: 0.3;
+  border: 1px solid var(--Primary-Nutmeg);
+  background-color: var(--Primary-Nutmeg);
 }
 
 .recipe_name {
@@ -121,9 +127,15 @@ body {
   color: var(--Neutral-Wenge-Brown);
 }
 
-.prep_time {
+.prep_time,
+.ingredients,
+.instructions,
+.nutrition {
   width: 100%;
-  border-radius: 10px;
+}
+
+.prep_time {
+  border-radius: 8px;
   padding: 15px;
   background-color: var(--Neutral-Rose-White);
 }
@@ -135,17 +147,75 @@ body {
 .bold {
   color: hsl(24, 5%, 18%, 0.9);
   font-weight: var(--f-weight-bold);
+  margin-right: 5px;
 }
 
-ol > li,
-ul > li {
+ol,
+ul {
+  list-style-position: inside;
+}
+
+ol li,
+ul li {
   color: var(--Neutral-Wenge-Brown);
   margin: 10px 0;
-  overflow: ;
+  /* list-style-position: inside; */
+}
+
+ul > li::marker,
+ol > li::marker {
+  color: var(--Primary-Nutmeg);
+  font-weight: var(--f-weight-bold);
 }
 
 h2 {
   color: var(--Primary-Nutmeg);
   font-family: var(--font-family-Young-Serif);
-  font-weight: 500;
+  font-weight: var(--f-weight-regular);
+}
+
+.nutrition > * {
+  color: var(--Neutral-Wenge-Brown);
+}
+.nutrition > h2 {
+  color: var(--Primary-Nutmeg);
+}
+.nutrition_name {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+.nutrition_name span {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.nutrition_name span:last-child {
+  font-weight: var(--f-weight-bold);
+  color: var(--Primary-Nutmeg);
+}
+
+@media screen and (min-width: 375px) {
+  .recipe_img {
+    padding: 20px;
+  }
+
+  .recipe_img img {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .recipe_card {
+    max-width: 800px;
+  }
+
+  .recipe_img {
+    padding: 30px;
+  }
 }
